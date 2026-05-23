@@ -94,7 +94,7 @@ export default function DonorCarousel({ names = [
     </div>
     
     <p className="small">
-      Last Delievery Run: 5/12/2026
+      Last Delievery Run: 5/23/2026
     </p>
     </section>
   );
