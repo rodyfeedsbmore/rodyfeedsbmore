@@ -1,20 +1,31 @@
+import Carousel from "./Carousel";
 
 export default function Rody() {
   return (
     <section className="container-inner card">
 
-          <img
-            className="profile"
-            src="./rody.jpg"
-            alt="Rody"
-            width={200}
-            height={200}
+          <Carousel 
+            images={[
+              "./rody.jpg", 
+              "./1.jpeg",
+              "./2.jpeg",
+              "./3.jpeg"
+            ]} 
           />
+
           <h1 className="title">Welcome, I&apos;m Rody!</h1>
 
           <p className="kicker">
-           Currently living in Baltimore, MD. My goal is to make access to food easier and a human right for all.
-            Donations are appreciated and go directly to purchasing food, bags, and gas for my trips around Baltimore.
+       
+            Every two weeks I deliever goodie bags to Baltimore residents in need. 
+            Donations, hygiene products, clothing, and more are all welcome.
+            <br/><br/>
+           Help me bridge the gap for those in need by donating or sharing my mission with others.
+          </p>
+          <br/>
+          <p className=" small-this">
+          
+          *All images used are consented and permitted for use.*
           </p>
 
     </section>

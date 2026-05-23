@@ -174,3 +174,30 @@ a {
     opacity: 1;
   }
 }
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 400ms ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers image */
+  height: 100%;
+}
+
+.carousel-slide img {
+  height: 300px;
+  object-fit: contain; /* keeps full image visible and centered */
+  display: block;
+  pointer-events: none;
+  border-radius: 10%;
+}

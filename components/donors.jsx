@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 export default function DonorCarousel({ names = [
-  "First Donator: Gabriela G $5", "Kei $25",
-  "Robert Spicer $20", 
-  "Joshua Green $25", 
-  "CRH (Anon) $100", 
-  "Melvin Woolfork $20", 
-  "Kenny $20", 
-  "Erkia $20"
+  ["Robert Spicer", 20], ["Joshua Green", 25], ["CRH (Anon)", 100],
+  ["Melvin Woolfork", 20], ["Kenny", 20], ["Erkia", 20],
+  ["William hathron", 50], ["Jesse McDaniel", 10], ["Deitrick Franklin", 50],
+  ["Black Rico", 48], ["Kei", 25], ["Yomy", 40],
 ], visible = 1.2, durationPerItem = 2 }) {
   // Ensure at least 1 item visible
   const list = names.length ? names : ["No donors yet"];
@@ -18,15 +15,15 @@ export default function DonorCarousel({ names = [
   const [animateKey, setAnimateKey] = useState(0);
 
   useEffect(() => {
-    if (value >= 80) return;
+    if (value >= 92) return; /* where to update count */
     const id = setInterval(() => {
       setValue((v) => {
-        const next = Math.min(80, v + 1);
+        const next = Math.min(92, v + 1);
         setAnimateKey((k) => k + 1); // retrigger slide animation
         if (next >= 80) clearInterval(id);
         return next;
       });
-    }, 40); // adjust speed (ms per increment)
+    }, 44); // adjust speed (ms per increment)
     return () => clearInterval(id);
   }, [value]);
 
@@ -90,14 +87,14 @@ export default function DonorCarousel({ names = [
         {/* duplicate list for seamless infinite scroll */}
         {[...list, ...list].map((name, i) => (
           <p className="donor-item small-this" key={i}>
-            {name}
+            {name[0]} donated ${name[1]}
           </p>
         ))}
       </div>
     </div>
     
     <p className="small">
-      Last Delievery Run: 5/11/2026
+      Last Delievery Run: 5/12/2026
     </p>
     </section>
   );

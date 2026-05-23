@@ -8,6 +8,7 @@ import '../src/App.css';
 import Rody from "../components/rody";
 import DonorCarousel from "../components/donors";
 import Nav from "../components/nav";
+import Carousel from "../components/Carousel";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       <main className="container">
 
         <Rody />
-       
+
         <DonorCarousel />
         
       </main>
