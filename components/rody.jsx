@@ -18,7 +18,7 @@ export default function Rody() {
           <p className="kicker">
        
             Every two weeks I deliever goodie bags to Baltimore residents in need. 
-            Donations, hygiene products, clothing, and more are all welcome.
+            Donations, hygiene products, clothing, and more are all appreciated.
             <br/><br/>
            Help me bridge the gap for those in need by donating or sharing my mission with others.
           </p>
