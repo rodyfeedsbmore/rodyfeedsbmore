@@ -74,7 +74,10 @@ export default function DonorCarousel({ names = [
 
     </p>
       
-    <div className="donor-wrap" style={{ height: `${visible * 1.6}rem` }}>
+   <div>
+
+         <div className="donor-wrap" style={{ height: `${visible * 1.6}rem` }}>
+      
       <div
         className="donor-track"
         style={{
@@ -86,12 +89,66 @@ export default function DonorCarousel({ names = [
       >
         {/* duplicate list for seamless infinite scroll */}
         {[...list, ...list].map((name, i) => (
-          <p className="donor-item small-this" key={i}>
-            {name[0]} donated ${name[1]}
-          </p>
+          (
+            name[1] <= 20 ? (
+              <p className="donor-item small-this" key={i}>
+                 {name[0]} donated ${name[1]}
+              </p>
+            ) : null
+          )
+        ))}
+      
+      </div>
+     
+    </div>
+
+     <div className="donor-wrap" style={{ height: `${visible * 1.6}rem` }}>
+      <div
+        className="donor-track"
+        style={{
+          // set animation duration dynamically for smooth timing
+          animationDuration: `${totalSeconds}s`,
+          // size of a single item used by CSS spacing; keep matching .donor-item height
+        }}
+        aria-live="polite"
+      >
+        {/* duplicate list for seamless infinite scroll */}
+        {[...list, ...list].map((name, i) => (
+          (
+            name[1] > 21 && name[1] <= 49 ? (
+              <p className="donor-item small-this" key={i}>
+                {name[0]} donated ${name[1]}
+              </p>
+            ) : null
+          )
         ))}
       </div>
     </div>
+
+     <div className="donor-wrap" style={{ height: `${visible * 1.6}rem` }}>
+      <div
+        className="donor-track"
+        style={{
+          // set animation duration dynamically for smooth timing
+          animationDuration: `${totalSeconds}s`,
+          // size of a single item used by CSS spacing; keep matching .donor-item height
+        }}
+        aria-live="polite"
+      >
+        {/* duplicate list for seamless infinite scroll */}
+        {[...list, ...list].map((name, i) => (
+          (
+            name[1] > 30 ? (
+              <p className="donor-item small-this" key={i}>
+                {name[0]} donated ${name[1]}
+              </p>
+            ) : null
+          )
+        ))}
+      </div>
+    </div>
+
+   </div>
     
     <p className="small">
       Last Delievery Run: 5/23/2026

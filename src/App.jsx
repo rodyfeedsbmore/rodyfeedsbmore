@@ -15,12 +15,13 @@ function App() {
   return (
     <div className="App">
       
-      <Nav />
-    
-      <main className="container">
-
+        {/* Navigation Bar */}
+        <Nav />
+        {/* Main Content */}
+        <main className="container">
+        {/* Rody's profile and mission statement */}
         <Rody />
-
+        {/* Donor Carousel */}
         <DonorCarousel />
         
       </main>
